@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FanvilConfiguration Beep="yes">
+<Item>phone.date.SNTPEnabled = 0</Item>
+</FanvilConfiguration>
