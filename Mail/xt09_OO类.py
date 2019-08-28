@@ -169,8 +169,13 @@ class SetInfo(object):
         else:
             return "你传入的不是集合"
 
+
+"""
 my_set = SetInfo([1, 2, 3, 4, 5, 6])
 my_set2 = {0, 9, 8, 7, 5}
 print(my_set.add_setinfo(9))
 print(my_set.set)
 #print(my_set.set)
+"""
+
+
