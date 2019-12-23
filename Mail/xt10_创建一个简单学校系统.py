@@ -110,7 +110,3 @@ grade_python = Grade("北京", 5, "Python")
 grade_linux = Grade("成都", 1, "Linux")
 xiaozhang = Student("小张", 18, "男", "学生",  )
 a.course_info()
-
-
-
-
