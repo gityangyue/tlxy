@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://F:/FDPS_Test/.idea/FDPS_Test.iml" filepath="F:/FDPS_Test/.idea/FDPS_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../FDPS_Test/.idea/FDPS_Test.iml" filepath="$PROJECT_DIR$/../FDPS_Test/.idea/FDPS_Test.iml" />
+      <module fileurl="file://G:/document/python/code/1/autotest/.idea/autotest.iml" filepath="G:/document/python/code/1/autotest/.idea/autotest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/code.iml" filepath="$PROJECT_DIR$/.idea/code.iml" />
+      <module fileurl="file://F:/文档/网络环境/论坛/styles/.idea/styles.iml" filepath="F:/文档/网络环境/论坛/styles/.idea/styles.iml" />
     </modules>
   </component>
 </project>
