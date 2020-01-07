@@ -14,16 +14,19 @@
 
 import random as r
 
-class Turtle(object):
+class Turtle(object):  #龟的类
     def __init__(self):
+        #龟的初始位置
         self.x = r.randint(0, 10)
         self.y = r.randint(0, 10)
         self.power = 100
 
     def move(self):
+        #龟的移动，随机移动1或者2，
         new_x = r.choice([-2, -1, 1, 2]) + self.x
         new_y = r.choice([-2, -1, 1, 2]) + self.y
 
+        # 到达边界则反向移动
         if new_x < 0:
             self.x = 0 - new_x
         elif new_x > 10:
@@ -38,20 +41,26 @@ class Turtle(object):
         else:
             self.y = new_y
 
+        #每次移动消耗能量1
         self.power -= 1
+
         return (self.x, self.y)
 
     def eat(self):
+        #吃鱼之后能量加20 ，但是最大100
         self.power += 20
         if self.power > 100:
             self.power = 100
 
-class Fish(object):
+class Fish(object):  # 鱼的类
     def __init__(self):
+
+        #鱼的初始位置
         self.x = r.randint(0, 10)
         self.y = r.randint(0, 10)
 
     def move(self):
+        #鱼会随机移动1 ，到边界后自动返回
         new_x = r.choice([-1, 1]) + self.x
         new_y = r.choice([-1, 1]) + self.y
 
@@ -71,12 +80,18 @@ class Fish(object):
 
         return (self.x, self.y)
 
+
+#生成乌龟
 turtle = Turtle()
+
+
+#生成10条鱼
 fish = []
 for i in range(10):
     new_fish = Fish()
     fish.append(new_fish)
 
+#游戏程序
 while True:
     if not len(fish):
         print("鱼被吃完了，游戏结束")
