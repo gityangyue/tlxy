@@ -32,8 +32,8 @@ class RandomBall():
         #球出现的初始位置，随机定义
         # xpos ：X坐标
         # ypos ： Y坐标
-        self.xpos = random.randint(10, int(scrnwidth)-20)
-        self.ypos = random.randint(10, int(scrnheight)-20)
+        self.xpos = random.randint(200, int(scrnwidth)-200)
+        self.ypos = random.randint(200, int(scrnheight)-200)
 
         #定义球运动的速度
         #模拟运动：不断的擦掉原来的球，然后在一个新的地方再绘制
@@ -87,11 +87,11 @@ class RandomBall():
             self.xvelocity = -self.xvelocity
 
         if self.ypos + self.radius >= self.scrnheight:
-            # 到了上边界
+            # 到了下边界
             self.yvelocity = -self.yvelocity
 
         if self.ypos - self.radius <= 0:
-            #到了下边界
+            #到了上边界
             self.yvelocity = -self.yvelocity
 
         if self.xpos - self.radius <= 0:
@@ -120,7 +120,7 @@ class ScreenSaver():
         #任何鼠标移动都需要取消
         self.root.bind('<Motion>', self.myquit)
         #同理，安东任何键盘都需要退出屏保
-
+        self.root.bind('<Key>', self.myquit)
         #得到屏幕大小规格
         w, h = self.root.winfo_screenwidth(), self.root.winfo_screenheight()
 
@@ -132,7 +132,6 @@ class ScreenSaver():
             ball = RandomBall(self.canvas, scrnwidth=w, scrnheight=h)
             ball.creat_ball()
             self.balls.append(ball)
-
         self.run_screen_saver()
         self.root.mainloop()
 
@@ -141,7 +140,7 @@ class ScreenSaver():
             ball.move_ball()
 
         #after是200毫秒后启动一个函数，需要启动的函数是第二个参数,不是python递归的实现，不会在10000次递归之后停止。
-        self.canvas.after(200, self.run_screen_saver)
+        self.canvas.after(50, self.run_screen_saver)
 
     def myquit(self, event):
         #利用事件处理机制
