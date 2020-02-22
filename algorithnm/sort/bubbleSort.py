@@ -1,6 +1,8 @@
 #冒泡排序
 #依次将最大的数移动到列表末尾。
 import random
+
+
 def bubbleSort_simple(li):
     for i in range(len(li)-1): # 第n次冒泡
         exchange = False              # 标识交换

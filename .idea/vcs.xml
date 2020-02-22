@@ -2,7 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../FDPS_Test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../XMLRPC" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../newbee-mall" vcs="Git" />
     <mapping directory="G:/document/python/code/1/autotest" vcs="Git" />
   </component>
 </project>
